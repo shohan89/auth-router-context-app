@@ -28,7 +28,7 @@ const UserContext = ({ children }) => {
         return signOut(auth);
     }
 
-    // why we are doing this
+    // using useEffect for holding the Auth
     useEffect( ()=>{
         const unsubscribe = onAuthStateChanged( auth, currentUser => {
             setUser( currentUser );
